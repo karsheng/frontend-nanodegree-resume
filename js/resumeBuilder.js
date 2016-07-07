@@ -1,10 +1,10 @@
-var formattedName = HTMLheaderName.replace('%data%','Karsheng Lee');
+var formattedName = HTMLheaderName.replace('%data%', 'Karsheng Lee');
 var formattedRole = HTMLheaderRole.replace('%data%', 'Web Developer');
 
 $('#header').prepend(formattedRole);
 $('#header').prepend(formattedName);
 
-var skills = ['programming', 'web developemnt','chemical engineering' ]
+var skills = ['programming', 'web design', 'web development','chemical engineering'];
 var bio = {
   'name' : 'Karsheng',
   'role' : 'Web Developer',
@@ -28,7 +28,7 @@ var formattedLocation = HTMLlocation.replace('%data%', bio.contacts.location);
 
 bio.display = function () {
 
-  var formattedbioPic = HTMLbioPic.replace('%data%', bio.biopic)
+  var formattedbioPic = HTMLbioPic.replace('%data%', bio.biopic);
   var formattedWelcomeMessage = HTMLwelcomeMsg.replace('%data%', bio.welcomeMessage);
 
   $('#topContacts').append(formattedMobile);
@@ -41,10 +41,10 @@ bio.display = function () {
   $('#header').append(HTMLskillsStart);
 
   for (i = 0; i < bio.skills.length; i++) {
-    var skill = HTMLskills.replace('%data%', bio.skills[i])
-    $('#skills-h3').append(skill);
+    var skill = HTMLskills.replace('%data%', bio.skills[i]);
+    $('#skills').append(skill);
   }
-}
+};
 
 bio.display();
 
@@ -55,7 +55,7 @@ var education = {
       'location' : 'Nottingham, UK',
       'degree' : 'MSc',
       'majors' : 'Chemical Engineering',
-      'dates' : '2011-2012',
+      'dates' : 2012,
       'url' : 'https://www.nottingham.ac.uk/'
     },
     {
@@ -63,7 +63,7 @@ var education = {
       'location' : 'Kuala Lumpur, Malaysia',
       'degree' : 'BEng',
       'majors' : 'Chemical Engineering',
-      'dates' : '2008-2011',
+      'dates' : 2011,
       'url' : 'https://www.nottingham.ac.uk/'
     }
   ],
@@ -71,13 +71,13 @@ var education = {
     {
       'title' : 'Front-End Web Developer Nanodegree',
       'school' : 'Udacity',
-      'dates' : '2016 - ongoing',
+      'dates' : 2016,
       'url' : 'https://www.udacity.com'
     },
     {
       'title' : 'The Complete Web Development Course',
       'school' : 'Udemy',
-      'dates' : '2015',
+      'dates' : 2015,
       'url' : 'https://www.udemy.com'
     }
   ],
@@ -87,12 +87,12 @@ var education = {
 
       var formattedSchoolName = HTMLschoolName.replace('%data%', education.schools[i].name);
       var formattedSchoolDegree = HTMLschoolDegree.replace('%data%', education.schools[i].degree);
+      var formattedSchool = formattedSchoolName + formattedSchoolDegree;
       var formattedSchoolDates = HTMLschoolDates.replace('%data%', education.schools[i].dates);
       var formattedSchoolLocation = HTMLschoolLocation.replace('%data%', education.schools[i].location);
       var formattedSchoolMajor = HTMLschoolMajor.replace('%data%', education.schools[i].majors);
 
-      $('.education-entry:last').append(formattedSchoolName);
-      $('.education-entry:last').append(formattedSchoolDegree);
+      $('.education-entry:last').append(formattedSchool);
       $('.education-entry:last').append(formattedSchoolDates);
       $('.education-entry:last').append(formattedSchoolLocation);
       $('.education-entry:last').append(formattedSchoolMajor);
@@ -112,8 +112,6 @@ var education = {
       $('.education-entry:last').append(formattedOnlineCourse);
       $('.education-entry:last').append(formattedOnlineDates);
       $('.education-entry:last').append(formattedOnlineURL);
-
-
     }
   }
 };
@@ -144,13 +142,15 @@ var work = {
       var formattedEmployer = HTMLworkEmployer.replace('%data%', work.jobs[i].employer);
       var formattedTitle = HTMLworkTitle.replace('%data%', work.jobs[i].title);
       var formattedEmployerTitle = formattedEmployer + formattedTitle;
-      var formattedDates = HTMLworkDates.replace('%data%', work.jobs[i].dates)
-      var formattedDescription = HTMLworkDescription.replace('%data%', work.jobs[i].description)
+      var formattedDates = HTMLworkDates.replace('%data%', work.jobs[i].dates);
+      var formattedWorkLocation = HTMLworkLocation.replace('%data%', work.jobs[i].location);
+      var formattedDescription = HTMLworkDescription.replace('%data%', work.jobs[i].description);
 
       $('.work-entry:last').append(formattedEmployerTitle);
       $('.work-entry:last').append(formattedDates);
+      $('.work-entry:last').append(formattedWorkLocation);
       $('.work-entry:last').append(formattedDescription);
-    };
+    }
   }
 };
 
@@ -160,7 +160,7 @@ var projects = {
   'projects' : [
     {
       'title' : 'Peach',
-      'dates'  : '2016-Ongoing',
+      'dates'  : '2016 - Ongoing',
       'description' : 'A fashion consulting app.',
       'images': ['images/peach-1-300x300_1x.png','images/peach-2-300x300_1x.png']
     },
