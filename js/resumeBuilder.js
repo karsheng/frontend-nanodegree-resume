@@ -80,7 +80,7 @@ var education = {
     }
   ],
   'display' : function() {
-    for (i = 0; i < education.schools.length; i++) {
+    for (var i = 0; i < education.schools.length; i++) {
       $('#education').append(HTMLschoolStart);
 
       var formattedSchoolName = HTMLschoolName.replace('%data%', education.schools[i].name);
@@ -98,7 +98,7 @@ var education = {
 
     $('#education').append(HTMLonlineClasses);
 
-    for (j = 0; j < education.onlineCourses.length; j++) {
+    for (var j = 0; j < education.onlineCourses.length; j++) {
       $('#education').append(HTMLschoolStart);
 
       var formattedOnlineTitle = HTMLonlineTitle.replace('%data%', education.onlineCourses[j].title);
@@ -136,7 +136,7 @@ var work = {
     }
   ],
   'display' : function() {
-    for (i = 0; i < work.jobs.length; i++) {
+    for (var i = 0; i < work.jobs.length; i++) {
       $('#workExperience').append(HTMLworkStart);
 
       var formattedEmployer = HTMLworkEmployer.replace('%data%', work.jobs[i].employer);
