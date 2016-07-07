@@ -1,0 +1,55 @@
+JavaScript
+
+.append()
+.prepend()
+.toUpperCase()
+.toLowerCase()
+.slice() - works on array and strings
+array.push() - add an element to end of array
+array.pop() - remove the last element of an array
+array.join() e.g. array.join(" ") to join the strings in the array with " "
+.split() e.g. string.split(" ") to split the string into arrays via
+
+There are no classes in JS!
+
+to create object:
+bio = {
+  "info1" : "a",
+  "info2" : {
+      "subinfo1" : "abc",
+      "subinfo2" : "b"
+  },
+  "info3" : 3
+};
+
+to append to object:
+bio.info4 = "new info 4"
+bio.info5 = {
+  "subinfo5" : 1,
+  "subinfo6" : 2
+}
+
+To create JSON (JavaScript Object Notation):
+var education = {
+  "Schools" : [
+    {
+      "name" : "Uni of Notts",
+      "location" : "Nottingham, UK"
+    },
+    {
+      "name" : "Uni of Cambridge",
+      "location" : "Cambridge, UK"
+    }
+
+  ]
+};
+
+jQuery is just a JavaScript library.
+Use Content Delivery Network (CDN) e.g. Google is usually faster than hosting yourself locally or from jQuery official.
+.parent to go up one level
+.parents to go up multiple levels
+.children to go down one level
+.find() to go down multiple levels
+
+monitorEvents() - to be used on Google Chrome console to log events.
+eventDelegation - useful for accessing DOM object created after the DOM is loaded.
