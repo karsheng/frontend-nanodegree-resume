@@ -153,3 +153,42 @@ var work = {
 };
 
 work.display();
+
+var projects = {
+  'projects' : [
+    {
+      'title' : 'Peach',
+      'dates'  : '2016-Ongoing',
+      'description' : 'A fashion consulting app.',
+      'images': ['images/peach-1.png','images/peach-2.png']
+    },
+    {
+      'title' : 'ATCM Offical Website',
+      'dates' : '2015',
+      'description': 'The official website of the Association of Trust Companies Malaysia.',
+      'images': ['images/atcm-1.png','images/atcm-2.png']
+    }
+  ],
+  'display' : function() {
+    for (var i = 0; i < projects.projects.length; i++) {
+      $('#projects').append(HTMLprojectStart);
+
+      var formattedProjectName = HTMLprojectTitle.replace('%data%', projects.projects[i].title);
+      var formattedProjectYear = HTMLprojectDates.replace('%data%', projects.projects[i].dates);
+      var formattedProjectDesc = HTMLprojectDescription.replace('%data%', projects.projects[i].description);
+
+      $('.project-entry:last').append(formattedProjectName);
+      $('.project-entry:last').append(formattedProjectYear);
+      $('.project-entry:last').append(formattedProjectDesc);
+
+      for (var j = 0; j < projects.projects[i].images.length; j++) {
+        var image = projects.projects[i].images[j];
+        var formattedProjectImage = HTMLprojectImage.replace('%data%', image);
+
+        $('.project-entry:last').append(formattedProjectImage);
+      }
+    }
+  }
+};
+
+projects.display();
