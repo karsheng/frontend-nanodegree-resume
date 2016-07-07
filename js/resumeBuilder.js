@@ -117,3 +117,39 @@ var education = {
 };
 
 education.display();
+
+var work = {
+  'jobs' : [
+    {
+    'title' : 'Web Developer',
+    'employer' : 'Freelance',
+    'dates' : '2015 - Current',
+    'location' : 'Kuala Lumpur, Malaysia',
+    'description' : 'I have been developing website for others. Now I want to do this professionally.'
+    },
+    {
+    'title' : 'Process Engineer',
+    'employer' : 'SBM Offshore',
+    'dates' : '2013 - Current',
+    'location' : 'Kuala Lumpur, Malaysia',
+    'description' : 'I work in the oil and gas industry.'
+    }
+  ],
+  'display' : function() {
+    for (i = 0; i < work.jobs.length; i++) {
+      $('#workExperience').append(HTMLworkStart);
+
+      var formattedEmployer = HTMLworkEmployer.replace('%data%', work.jobs[i].employer);
+      var formattedTitle = HTMLworkTitle.replace('%data%', work.jobs[i].title);
+      var formattedEmployerTitle = formattedEmployer + formattedTitle;
+      var formattedDates = HTMLworkDates.replace('%data%', work.jobs[i].dates)
+      var formattedDescription = HTMLworkDescription.replace('%data%', work.jobs[i].description)
+
+      $('.work-entry:last').append(formattedEmployerTitle);
+      $('.work-entry:last').append(formattedDates);
+      $('.work-entry:last').append(formattedDescription);
+    };
+  }
+};
+
+work.display();
