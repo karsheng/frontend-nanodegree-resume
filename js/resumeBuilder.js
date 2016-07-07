@@ -162,13 +162,13 @@ var projects = {
       'title' : 'Peach',
       'dates'  : '2016-Ongoing',
       'description' : 'A fashion consulting app.',
-      'images': ['images/peach-1.png','images/peach-2.png']
+      'images': ['images/peach-1-300x300_1x.png','images/peach-2-300x300_1x.png']
     },
     {
       'title' : 'ATCM Offical Website',
       'dates' : '2015',
       'description': 'The official website of the Association of Trust Companies Malaysia.',
-      'images': ['images/atcm-1.png','images/atcm-2.png']
+      'images': ['images/atcm-1-300x300_1x.png','images/atcm-2-300x300_1x.png']
     }
   ],
   'display' : function() {
