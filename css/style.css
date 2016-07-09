@@ -11,7 +11,11 @@ h5,
 h6 {
   padding:0;
   margin:0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Helvetica", sans-serif;
+}
+
+li {
+  display: block;
 }
 
 .clear-fix {
@@ -27,9 +31,8 @@ h6 {
 
 h1 {
   font-size: 40px;
-  color: #f5a623;
+  color: #4a4a4a;
   line-height: 48px;
-  display: inline;
 }
 
 h2 {
@@ -86,7 +89,7 @@ p {
   line-height: 21px;
 }
 
-a {
+.hyperlink {
   color: #1199c3;
   text-decoration: none;
   margin-top: 10px;
@@ -101,20 +104,19 @@ a {
 }
 
 #skills-h3 {
-  color: #f5ae23;
-  display: none;
+  color: #4a4a4a;
+  display: block;
 }
 
 .orange {
   background-color: #f5ae23;
 }
 
-.orange-text {
-  color: #f5ae23;
+.gray-text {
+  color: #4a4a4a;
 }
 
 .white-text {
-  font-weight: bold;
   color: #fff;
 }
 
@@ -130,16 +132,7 @@ a {
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
-}
-
-.flex-box {
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 10px;
+  background-color: #2babe3;
 }
 
 .center-content {
@@ -154,7 +147,8 @@ ul {
   float: left;
   padding: 10px;
   width: 200px;
-  display: none;
+  display: block;
+  border-radius: 100%;
 }
 
 img {
@@ -207,9 +201,34 @@ span {
   padding-bottom: 5%;
 }
 
-@media only screen and (min-width: 750px) {
-  #skills-h3,
-  .biopic {
-    display: block;
+@media only screen and (min-width: 500px) {
+  .flex-box {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
   }
+  h1 {
+    display: inline;
+  }
+}
+
+.flex-item {
+  padding: 5px;
+}
+
+.role-text {
+  color: #5a6a62;
+}
+
+.link-text {
+  color: #fff;
+  text-decoration: none;
+}
+
+.link-text:hover {
+  color: #0e1f56;
+  text-decoration: underline;
 }

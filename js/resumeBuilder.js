@@ -21,9 +21,9 @@ var bio = {
   'welcomeMessage' : 'Hello I am Karsheng. I am an aspiring web developer!',
   'skills' : skills
 };
-var emailLink = '<a href="mailto:"' + bio.contacts.email + '">' + bio.contacts.email + '</a>';
-var twitterLink = '<a href="' + bio.contacts.twitterLink + '" target="_blank">' + bio.contacts.twitter + '</a>';
-var githubLink = '<a href="' + bio.contacts.githubLink + '" target="_blank">' + bio.contacts.github + '</a>';
+var emailLink = '<a class="link-text" href="mailto:"' + bio.contacts.email + '">' + bio.contacts.email + '</a>';
+var twitterLink = '<a class="link-text" href="' + bio.contacts.twitterLink + '" target="_blank">' + bio.contacts.twitter + '</a>';
+var githubLink = '<a class="link-text" href="' + bio.contacts.githubLink + '" target="_blank">' + bio.contacts.github + '</a>';
 
 var formattedMobile = HTMLmobile.replace('%data%', bio.contacts.mobile);
 var formattedEmail = HTMLemail.replace('%data%', emailLink);
@@ -221,3 +221,6 @@ function displayTwitterFeed(tw) {
 }
 
 displayTwitterFeed(twitterWidget);
+
+var roleText = $('#header').find('span').first();
+roleText.addClass('role-text');
