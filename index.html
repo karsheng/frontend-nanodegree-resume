@@ -45,7 +45,10 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   <!--
   Uncomment the <script> tag below when you're ready to add an interactive Google Map to your resume!
   -->
-  <script src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyDfSVYuyay3UEi8aOkCRM7cthMd8ZES2cQ"></script> 
+  <script src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyDfSVYuyay3UEi8aOkCRM7cthMd8ZES2cQ"></script>
+
+  <!-- include widgets.js to improve performance and reliability https://dev.twitter.com/web/javascript/loading-->
+  <script src="js/widgets.js"></script>
 
   <meta name="viewport" content="width=device-width">
 </head>
@@ -71,7 +74,10 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     <div id="education" class="gray">
       <h2>Education</h2>
     </div>
-    <div id="mapDiv">
+    <div id="twitterFeed">
+      <h2>Twitter Feed</h2>
+    </div>
+    <div id="mapDiv" class="gray">
       <h2>Where I've Lived and Worked</h2>
     </div>
     <div id="lets-connect" class="dark-gray">

@@ -12,18 +12,23 @@ var bio = {
       'email' : 'karshenglee@gmail.com',
       'mobile' : '+6012-6930715',
       'github' : 'karsheng',
+      'githubLink' : 'https://github.com/karsheng',
       'twitter' : '@karshenglee',
+      'twitterLink' : 'https://twitter.com/karshenglee',
       'location' : 'Kuala Lumpur'
   },
   'biopic': 'https://scontent-sin1-1.cdninstagram.com/t51.2885-15/e15/10616777_526199117481379_500143064_n.jpg?ig_cache_key=NzkyNzQ0NDU1NDg3ODY3MTEx.2',
-  'welcomeMessage' : 'Hello I am Karsheng. I am a very good web developer!',
+  'welcomeMessage' : 'Hello I am Karsheng. I am an aspiring web developer!',
   'skills' : skills
 };
+var emailLink = '<a href="mailto:"' + bio.contacts.email + '">' + bio.contacts.email + '</a>';
+var twitterLink = '<a href="' + bio.contacts.twitterLink + '" target="_blank">' + bio.contacts.twitter + '</a>';
+var githubLink = '<a href="' + bio.contacts.githubLink + '" target="_blank">' + bio.contacts.github + '</a>';
 
 var formattedMobile = HTMLmobile.replace('%data%', bio.contacts.mobile);
-var formattedEmail = HTMLemail.replace('%data%', bio.contacts.email);
-var formattedTwitter = HTMLtwitter.replace('%data%', bio.contacts.twitter);
-var formattedGithub = HTMLgithub.replace('%data%', bio.contacts.github);
+var formattedEmail = HTMLemail.replace('%data%', emailLink);
+var formattedTwitter = HTMLtwitter.replace('%data%', twitterLink);
+var formattedGithub = HTMLgithub.replace('%data%', githubLink);
 var formattedLocation = HTMLlocation.replace('%data%', bio.contacts.location);
 
 bio.display = function () {
@@ -108,6 +113,7 @@ var education = {
       var formattedOnlineCourse = formattedOnlineTitle + formattedOnlineSchool;
       var formattedOnlineDates = HTMLonlineDates.replace('%data%', education.onlineCourses[j].dates);
       var formattedOnlineURL = HTMLonlineURL.replace('%data%', education.onlineCourses[j].url);
+      formattedOnlineURL = formattedOnlineURL.replace('#', education.onlineCourses[j].url);
 
       $('.education-entry:last').append(formattedOnlineCourse);
       $('.education-entry:last').append(formattedOnlineDates);
@@ -206,3 +212,12 @@ function displayFooter() {
 }
 
 displayFooter();
+
+var twitterWidget = '<a class="twitter-timeline" data-height="700" data-width="400" href="https://twitter.com/karshenglee">Tweets by karshenglee</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>'
+
+function displayTwitterFeed(tw) {
+    $('#twitterFeed').append(HTMLtwitterFeed);
+    $('.twitter-feed').append(tw);
+}
+
+displayTwitterFeed(twitterWidget);
