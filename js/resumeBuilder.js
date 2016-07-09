@@ -224,3 +224,41 @@ displayTwitterFeed(twitterWidget);
 
 var roleText = $('#header').find('span').first();
 roleText.addClass('role-text');
+
+var projectsDiv = $('#projects');
+projectsDiv.addClass('light-blue');
+
+var workExperienceDiv = $('#workExperience');
+workExperienceDiv.removeClass('gray');
+
+var educationDiv = $('#education');
+educationDiv.removeClass('gray');
+
+var twitterFeedDiv = $('#twitterFeed');
+twitterFeedDiv.addClass('light-blue');
+
+function changeOnlineURLClass() {
+  $('.education-entry').each(function() {
+      var hyperlinkText = $(this).find('a').last();
+      if (hyperlinkText.text().indexOf('http') > -1) {
+        hyperlinkText.addClass('online-url');
+      }
+  });
+}
+
+function addHorizontalLine() {
+  $('.work-entry').each(function() {
+      $(this).append('<hr>');
+  });
+  $('.project-entry').each(function() {
+      $(this).append('<hr>');
+  });
+  $('.education-entry').each(function() {
+      $(this).append('<hr>');
+  });
+}
+
+changeOnlineURLClass();
+
+$('#lets-connect').children('h2').removeClass('orange');
+$('#lets-connect').children('h2').addClass('light-blue');

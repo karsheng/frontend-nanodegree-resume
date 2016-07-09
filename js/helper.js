@@ -53,7 +53,7 @@ var HTMLonlineClasses = '<h3>Online Classes</h3>';
 var HTMLonlineTitle = '<a href="#" class="hyperlink">%data%';
 var HTMLonlineSchool = ' - %data%</a>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';
-var HTMLonlineURL = '<br><a href="#" class="hyperlink" target="_blank">%data%</a>';
+var HTMLonlineURL = '<br><a href="#" target="_blank">%data%</a>';
 
 var HTMLtwitterFeed  = '<div class="twitter-feed"></div>';
 

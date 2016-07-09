@@ -44,9 +44,9 @@ h2 {
 }
 
 h3 {
-  font-style: italic;
-  font-size: 20px;
-  color: #000;
+  text-decoration: underline;
+  font-size: 18px;
+  color: #4a4a4a;
   line-height: 22px;
 }
 
@@ -109,7 +109,7 @@ p {
 }
 
 .orange {
-  background-color: #f5ae23;
+  background-color: #f38630;
 }
 
 .gray-text {
@@ -127,12 +127,12 @@ p {
 }
 
 .dark-gray {
-  background-color: #4a4a4a;
+  background-color: #888;
 }
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #2babe3;
+  background-color: #5cbdce;
 }
 
 .center-content {
@@ -231,4 +231,28 @@ span {
 .link-text:hover {
   color: #0e1f56;
   text-decoration: underline;
+}
+
+.light-blue {
+  background-color: #edf8fc;
+}
+
+.work-entry {
+  margin: 0 0 10px 0;
+}
+
+.online-url {
+  color: ##5a6a62;
+  text-decoration: none;
+  margin-top: 10px;
+  font-size: 14px;
+  display: block;
+}
+
+.online-url:hover {
+  text-decoration: underline;
+}
+
+.education-entry {
+  margin: 0 0 10px 0;
 }
